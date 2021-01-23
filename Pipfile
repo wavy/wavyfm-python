@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+mock = "==2.0.0"
+
+[packages]
+requests = "==2.15.1"
+
+[requires]
+python_version = "3"
+
+[scripts]
+tests = "python -m unittest discover -v tests"
+lint = "flake8 . --count --show-source --statistics"
