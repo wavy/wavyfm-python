@@ -1,6 +1,6 @@
 # wavyfm-python
 
-**The client library for [wavy.fm](https://wavy.fm), officially maintained by Wavy Labs.**
+**The Python client library for [wavy.fm](https://wavy.fm), officially maintained by Wavy Labs.**
 
 ![Tests](https://github.com/wavy/wavyfm-python/workflows/Tests/badge.svg)
 
@@ -32,10 +32,16 @@ WAVYFM_CLIENT_SECRET='priv_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 import wavyfm
 
 # Create the client
-wavy = wavyfm.WavyClient(auth=wavyfm.WavyClientCredentials())
+wavy = wavyfm.WavyClient(auth_manager=wavyfm.WavyClientCredentials())
 
 # Get the total listens recorded on wavy.fm
 print(wavy.metrics.get_total_listens())
+
+# Get the total amount of registered users on wavy.fm
+print(wavy.metrics.get_total_users())
+
+# Get the top 10 registered users on wavy.fm by listen count
+print(wavy.metrics.get_user_listens_leaderboard())
 ```
 
 ## License

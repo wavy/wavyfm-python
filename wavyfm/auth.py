@@ -7,6 +7,7 @@ This code is heavily inspired from Spotipy: https://github.com/plamere/spotipy
 __all__ = [
     "WavyAuthError",
     "WavyClientCredentials",
+    "_WavyAuthBase",
 ]
 
 import base64
@@ -17,29 +18,20 @@ from typing import Optional, Union, Dict
 
 import requests
 
+from wavyfm.error import WavyException
 from wavyfm.util import ENV_VARS, API_BASE_DEFAULT
 
 logger = logging.getLogger(__name__)
 
 
-class WavyAuthError(Exception):
+class WavyAuthError(WavyException):
     """An error during authentication"""
 
-    def __init__(self,
-                 message: str,
-                 error_status: int = None,
-                 error_code=None,
-                 error_detail=None,
-                 *args, **kwargs):
-        self.error_name = message
-        self.error_code = error_code
-        self.error_status = error_status
-        self.error_detail = error_detail
-        self.__dict__.update(kwargs)
-        super(WavyAuthError, self).__init__(message, *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
 
-class WavyAuthBase(object):
+class _WavyAuthBase(object):
     def __init__(self, requests_session: Union[requests.Session, bool] = None):
         if isinstance(requests_session, requests.Session):
             self._session = requests_session
@@ -71,13 +63,16 @@ class WavyAuthBase(object):
         # leave 30 seconds of grace
         return token_info["expires_at"] - now < 30
 
+    def get_access_token(self) -> str:
+        raise NotImplementedError()
+
     def __del__(self):
         # Make sure the connection gets closed
         if isinstance(self._session, requests.Session):
             self._session.close()
 
 
-class WavyClientCredentials(WavyAuthBase):
+class WavyClientCredentials(_WavyAuthBase):
     TOKEN_ENDPOINT = f"{API_BASE_DEFAULT}/token"
 
     def __init__(self,
@@ -119,7 +114,7 @@ class WavyClientCredentials(WavyAuthBase):
         :return: The access token (str)
         """
 
-        if self.token_info and not WavyAuthBase.is_token_expired(self.token_info):
+        if self.token_info and not _WavyAuthBase.is_token_expired(self.token_info):
             return self.token_info["access_token"]
 
         token_info = self._request_access_token()

@@ -8,3 +8,6 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 ### Added
 - Authentication through Client Credentials
+- v1beta metrics: get total listens
+- v1beta metrics: get total users
+- v1beta metrics: get user listens leaderboard
