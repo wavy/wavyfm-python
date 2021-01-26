@@ -1,2 +1,2 @@
 from .auth import *  # noqa
-from .util import *  # noqa
+from .client import *  # noqa
