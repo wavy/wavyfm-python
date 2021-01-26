@@ -10,7 +10,7 @@
 
 **The Python client library for [wavy.fm](https://wavy.fm), officially maintained by Wavy Labs.**
 
-![Tests](https://github.com/wavy/wavyfm-python/workflows/Tests/badge.svg) ![wavyfm on pypi](https://img.shields.io/pypi/v/wavyfm)
+![Tests](https://github.com/wavy/wavyfm-python/workflows/Tests/badge.svg) ![wavyfm on pypi](https://img.shields.io/pypi/v/wavyfm) ![Discord](https://img.shields.io/discord/742178434243100752?color=%237289DA&label=discord)
 
 ## Documentation
 
