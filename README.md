@@ -14,7 +14,10 @@
 
 ## Documentation
 
-> Coming soon!
+All endpoints are documented in the [wavy.fm developer docs](https://wavy.fm/developers). You can contribute to the docs
+and suggest API changes in the corresponding [Github repository](https://github.com/wavy/wavyfm-docs/).
+
+> Client library documentation coming soon!
 
 ## Installation
 
