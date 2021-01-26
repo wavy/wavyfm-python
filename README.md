@@ -1,3 +1,11 @@
+<p align="center">
+  <br />
+  <a href="https://wavy.fm" target="_blank" align="center">
+    <img src="https://wavy.fm/_assets/wavy-logo.png" width="280">
+  </a>
+  <br />
+</p>
+
 # wavyfm-python
 
 **The Python client library for [wavy.fm](https://wavy.fm), officially maintained by Wavy Labs.**
