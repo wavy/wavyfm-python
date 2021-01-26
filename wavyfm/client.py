@@ -8,6 +8,7 @@ from requests.packages import urllib3
 
 from wavyfm.error import WavyException
 from wavyfm.metrics import _WavyMetricsEndpoints
+from wavyfm.users import _WavyUsersEndpoints
 from wavyfm.util import API_BASE_DEFAULT
 from wavyfm.auth import _WavyAuthBase
 
@@ -45,10 +46,15 @@ class WavyClient(object):
             self._session = api
 
         self._metrics = _WavyMetricsEndpoints(self)
+        self._users = _WavyUsersEndpoints(self)
 
     @property
     def metrics(self) -> _WavyMetricsEndpoints:
         return self._metrics
+
+    @property
+    def users(self) -> _WavyUsersEndpoints:
+        return self._users
 
     def _build_session(self):
         self._session = requests.Session()
