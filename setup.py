@@ -17,13 +17,17 @@ extra_reqs = {
 
 setup(
     name='wavyfm',
-    version='1.0.0',
+    version='1.0.1',
     description='Official Python library for wavy.fm',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="@aramperes",
+    author="Aram Peres",
     author_email="aram.peres@wavy.fm",
     url='https://wavy.fm/developers',
+    project_urls={
+        'Documentation': 'https://github.com/wavy/wavyfm-python',
+        'Source': 'https://github.com/wavy/wavyfm-python',
+    },
     install_requires=[
         'requests>=2.20.1'
     ],

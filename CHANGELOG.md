@@ -7,6 +7,9 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.0.1] - 2021-01-25
+- Fix setup.py project metadata
+
 ## [1.0.0] - 2021-01-25
 ### Added
 - Authentication through Client Credentials
