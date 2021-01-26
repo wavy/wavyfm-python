@@ -11,7 +11,7 @@ mock = "==2.0.0"
 requests = "==2.15.1"
 
 [requires]
-python_version = "3"
+python_version = "3.8"
 
 [scripts]
 tests = "python -m unittest discover -v tests"
