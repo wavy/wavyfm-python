@@ -42,6 +42,21 @@ print(wavy.metrics.get_total_users())
 
 # Get the top 10 registered users on wavy.fm by listen count
 print(wavy.metrics.get_user_listens_leaderboard())
+
+# Get a user's public profile
+print(wavy.users.by_username("Aram").get_profile())
+
+# Get a user's total listens
+print(wavy.users.by_username("Aram").get_total_listens())
+
+# Get a user's total artists
+print(wavy.users.by_username("Aram").get_total_artists())
+
+# Get a user's currently listening track
+print(wavy.users.by_username("Aram").get_currently_listening())
+
+# Get a user's last 10 recorded listens
+print(wavy.users.by_username("Aram").get_recent_listens(10))
 ```
 
 ## License
