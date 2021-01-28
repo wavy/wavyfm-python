@@ -6,8 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Added utility for parsing wavy.fm date strings (RFC3339): `wavyfm.util.datetime_from_string` (GH-5)
 
 ## [1.0.1] - 2021-01-25
+### Fixes
 - Fix setup.py project metadata
 
 ## [1.0.0] - 2021-01-25
