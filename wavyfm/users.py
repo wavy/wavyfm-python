@@ -10,6 +10,9 @@ class _WavyProfileEndpoints:
         self._client = client
         self._uri = user_uri
 
+    def __repr__(self):
+        return f"<WavyProfileEndpoints '{self._uri}'>"
+
     def get_profile(self) -> Dict:
         """
         Retrieve this user's profile.
