@@ -17,7 +17,7 @@ extra_reqs = {
 
 setup(
     name='wavyfm',
-    version='1.0.1',
+    version='1.0.2',
     description='Official Python library for wavy.fm',
     long_description=long_description,
     long_description_content_type="text/markdown",

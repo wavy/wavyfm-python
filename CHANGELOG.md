@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+No changes
+
+## [1.0.2] - 2021-03-26
 ### Added
 - Added utility for parsing wavy.fm date strings (RFC3339): `wavyfm.util.datetime_from_string` (GH-5)
 - Added __repr__ to `wavfym.users._WavyProfileEndpoints`
