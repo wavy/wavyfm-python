@@ -23,7 +23,7 @@ class WavyClient(object):
                  auth: str = None,
                  auth_manager: _WavyAuthBase = None,
                  proxies=None,
-                 requests_timeout=5,
+                 requests_timeout=30,
                  status_forcelist=None,
                  retries=3,
                  status_retries=3,
