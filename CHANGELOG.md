@@ -9,6 +9,11 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 No changes
 
+## [1.0.3] - 2021-08-09
+### Changed
+- Increment minimum `requests` version to 2.26.0
+- Increment default client timeout to 30 seconds
+
 ## [1.0.2] - 2021-03-26
 ### Added
 - Added utility for parsing wavy.fm date strings (RFC3339): `wavyfm.util.datetime_from_string` (GH-5)
